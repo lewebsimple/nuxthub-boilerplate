@@ -3,15 +3,15 @@ export default defineNuxtConfig({
 
   modules: ["@nuxt/eslint", "@nuxthub/core"],
 
-  // $production: {
-  //   hub: {
-  //     blob: {
-  //       driver: "cloudflare-r2",
-  //       binding: "BLOB",
-  //       bucketName: "nuxthub-boilerplate",
-  //     },
-  //   },
-  // },
+  $production: {
+    hub: {
+      blob: {
+        driver: "cloudflare-r2",
+        binding: "BLOB",
+        bucketName: "nuxthub-boilerplate",
+      },
+    },
+  },
 
   devtools: { enabled: true },
   compatibilityDate: "2025-12-19",
@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: "cloudflare_module",
     cloudflare: {
+      nodeCompat: true,
       wrangler: {
         name: "nuxthub-boilerplate",
         r2_buckets: [
@@ -32,7 +33,10 @@ export default defineNuxtConfig({
   },
 
   hub: {
-    blob: true,
+    blob: {
+      driver: "fs",
+      dir: ".data/blob",
+    },
   },
 
   eslint: {
