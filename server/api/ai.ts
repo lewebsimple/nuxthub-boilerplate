@@ -1,6 +1,7 @@
 import { generateText } from "ai";
 
 export default defineEventHandler(async () => {
+  const workersai = getWorkersAI();
   const model = workersai("@cf/meta/llama-3.1-8b-instruct", { safePrompt: true });
 
   const message = await generateText({
