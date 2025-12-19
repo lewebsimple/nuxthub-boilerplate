@@ -6,6 +6,15 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: "2025-12-19",
 
+  nitro: {
+    preset: "cloudflare_module",
+    cloudflare: {
+      wrangler: {
+        name: "nuxthub-boilerplate",
+      },
+    },
+  },
+
   hub: {},
 
   eslint: {
@@ -19,5 +28,4 @@ export default defineNuxtConfig({
       },
     },
   },
-
 });
