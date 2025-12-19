@@ -22,6 +22,9 @@ export default defineNuxtConfig({
       nodeCompat: true,
       wrangler: {
         name: "nuxthub-boilerplate",
+        observability: {
+          enabled: true,
+        },
         ai: {
           binding: "AI",
         },
