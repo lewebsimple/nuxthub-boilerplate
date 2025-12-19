@@ -25,9 +25,6 @@ export default defineNuxtConfig({
         observability: {
           enabled: true,
         },
-        ai: {
-          binding: "AI",
-        },
         r2_buckets: [
           {
             binding: "BLOB",
