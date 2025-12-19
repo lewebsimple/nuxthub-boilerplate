@@ -1,3 +1,3 @@
 import { createWorkersAI } from "workers-ai-provider";
 
-export const workersAI = createWorkersAI({ binding: "AI" });
+export const workersai = createWorkersAI({ binding: "AI" });
