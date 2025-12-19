@@ -22,6 +22,9 @@ export default defineNuxtConfig({
       nodeCompat: true,
       wrangler: {
         name: "nuxthub-boilerplate",
+        ai: {
+          binding: "AI",
+        },
         r2_buckets: [
           {
             binding: "BLOB",
