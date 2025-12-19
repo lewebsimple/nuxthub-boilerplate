@@ -1,0 +1,29 @@
+{
+  "name": "@lewebsimple/nuxthub-boilerplate",
+  "author": "Pascal Martineau <pascal@lewebsimple.ca>",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "pnpm --sequential /build:.*/",
+    "build:typecheck": "nuxt typecheck",
+    "build:nuxt": "nuxt build",
+    "dev": "pnpm /dev:.*/",
+    "dev:nuxt": "nuxt dev --host 0.0.0.0",
+    "generate": "nuxt generate",
+    "lint": "eslint --fix .",
+    "preview": "nuxt preview",
+    "postinstall": "pnpm --sequential /postinstall:.*/",
+    "postinstall:nuxt": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/eslint": "1.10.0",
+    "eslint": "^9.39.2",
+    "nuxt": "^4.2.2",
+    "vue": "^3.5.26",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.1.8"
+  }
+}
