@@ -29,6 +29,9 @@ export default defineNuxtConfig({
         observability: {
           enabled: true,
         },
+        browser: {
+          binding: "BROWSER",
+        },
         r2_buckets: [
           {
             binding: "BLOB",
