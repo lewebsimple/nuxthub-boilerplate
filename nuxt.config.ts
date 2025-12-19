@@ -10,6 +10,10 @@ export default defineNuxtConfig({
         binding: "BLOB",
         bucketName: "nuxthub-boilerplate",
       },
+      kv: {
+        driver: "cloudflare-kv-binding",
+        namespace: "nuxthub-boilerplate",
+      },
     },
   },
 
@@ -39,6 +43,10 @@ export default defineNuxtConfig({
     blob: {
       driver: "fs",
       dir: ".data/blob",
+    },
+    kv: {
+      driver: "fs",
+      base: ".data/kv",
     },
   },
 
